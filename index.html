@@ -5,9 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop | Pablo García Roza</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+<!-- De este link sacamos los iconos -->
+    
 </head>
-
 <body>
     <!-- La sección del Encabezado / Barra de navegación-->
     <header>
@@ -16,6 +18,7 @@
                 <h2 class="logo-text">☕ Coffee Shop</h2>
             </a>
             <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Inicio</a>
                 </li>
@@ -35,6 +38,7 @@
                     <a href="#" class="nav-link">Contacto</a>
                 </li>
             </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
         </nav>
     </header>
     <main>
@@ -56,6 +60,6 @@
             </div>
         </section>
     </main>
+<script src="script.js"></script>
 </body>
-
 </html>

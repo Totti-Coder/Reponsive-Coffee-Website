@@ -84,7 +84,7 @@ header .navbar {
 
 .navbar .nav-menu{
 display: flex;
-gap: 10px
+gap: 10px;
 }
 
 
@@ -102,7 +102,9 @@ gap: 10px
     color: var(--primary-color)
 }
 
-
+.navbar :where(#menu-close-button, #menu-open-button){
+    display:none;
+}
 /* HERO SECTION */
 .hero-section {
     background: var(--primary-color);
@@ -181,7 +183,7 @@ gap: 10px
     .navbar .nav-menu{
         display: block;
         position: fixed;
-        left: 0;
+        left: -300px;
         top: 0;
         width: 300px;
         height: 100%;
@@ -190,6 +192,25 @@ gap: 10px
         align-items: center;
         padding: 100px;
         background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu{
+        left: 0;
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button){
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    .navbar #menu-open-button{
+        color: var(--white-color);
     }
 
     .navbar .nav-menu .nav-link{
