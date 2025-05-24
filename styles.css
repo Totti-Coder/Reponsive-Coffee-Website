@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-:root{
-
+:root {
     --white-color: #fff;
     --dark-color: #252525;
     --primary-color: #3b141c;
     --secondary-color: #f3961c;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
-    
-    --font-size-s:0.9rem;
-    --font-size-n:1rem;
-    --font-size-m:1.12rem;
-    --font-size-l:1.5rem;
-    --font-size-xl:2rem;
-    --font-size-xxl:2.3rem;
 
-    --font-weight-normal:400;
-    --font-weight-medium:500;
-    --font-weight-semibold:600;
-    --font-weight-bold:700;
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 
     --border-radius-s: 8px;
     --border-radius-m: 30px;
@@ -34,46 +33,68 @@
 
     --site-max-width: 1300px;
 }
+
 /* Diseñando la pagina web */
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
-img{
+
+img {
     width: 120%;
     height: auto;
 }
-button{
+
+button {
     cursor: pointer;
     border: none;
     background: none;
 }
 
-.section-content{
+.section-content {
     margin: 0 auto;
     padding: 0 30px;
     max-width: var(--site-max-width);
 }
 
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    white-space: nowrap;
+    max-width: var(--site-max-width);
+}
+
+.section-title::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background-color: #f3961c;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
 /* Diseñando la barra de navegación */
-header{
+header {
     background: var(--primary-color);
     position: fixed;
     width: 100%;
     z-index: 5;
 }
 
-
 header .navbar {
     display: flex;
     align-items: center;
     padding: 20px;
-    justify-content: space-between 
+    justify-content: space-between;
 }
-
 
 .navbar .nav-logo .logo-text {
     color: var(--white-color);
@@ -81,37 +102,35 @@ header .navbar {
     font-weight: var(--font-weight-semibold);
 }
 
-
-.navbar .nav-menu{
-display: flex;
-gap: 10px;
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
 }
 
-
-.navbar .nav-menu .nav-link{
+.navbar .nav-menu .nav-link {
     padding: 10px 18px;
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-m);
     color: var(--white-color);
     transition: 0.3s ease;
-
 }
 
-.navbar .nav-menu .nav-link:hover{
+.navbar .nav-menu .nav-link:hover {
     background: var(--secondary-color);
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
-.navbar :where(#menu-close-button, #menu-open-button){
-    display:none;
+.navbar :where(#menu-close-btn, #menu-open-btn) {
+    display: none;
 }
+
 /* HERO SECTION */
 .hero-section {
     background: var(--primary-color);
     min-height: 100vh;
 }
 
-.hero-section .section-content{
+.hero-section .section-content {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -119,31 +138,31 @@ gap: 10px;
     justify-content: space-between;
 }
 
-.hero-section .hero-details .title{
+.hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
     color: var(--secondary-color);
     font-family: "Miniver" sans-serif;
 }
 
-.hero-section .hero-details .subtitle{
+.hero-section .hero-details .subtitle {
     font-size: var(--font-size-xl);
     margin-top: 8px;
     max-width: 70%;
     font-weight: var(--font-weight-semibold);
 }
 
-.hero-section .hero-details .description{
+.hero-section .hero-details .description {
     font-size: var(--font-size-m);
     max-width: 70%;
     margin: 24px 0 40px;
 }
 
-.hero-section .hero-details .buttons{
+.hero-section .hero-details .btns {
     display: flex;
     gap: 23px;
 }
 
-.hero-section .hero-details .button{
+.hero-section .hero-details .btn {
     padding: 10px 20px;
     border: 2px solid transparent;
     color: var(--primary-color);
@@ -153,45 +172,95 @@ gap: 10px;
     transition: 0.4s ease;
 }
 
-.hero-section .hero-details .button:hover, .hero-section .hero-details .contact-us{
+.hero-section .hero-details .btn:hover,
+.hero-section .hero-details .contact-us {
     color: var(--white-color);
     border-color: var(--white-color);
     background: transparent;
 }
 
-.hero-section .hero-details .contact-us:hover{
+.hero-section .hero-details .contact-us:hover {
     color: var(--primary-color);
     border-color: var(--secondary-color);
     background: var(--secondary-color);
 }
 
-
-.hero-section .hero-image-wrapper{
+.hero-section .hero-image-wrapper {
     max-width: 500px;
     margin-right: 50px;
 }
 
-/* Media query code para un ancho máximo de 900px */
-@media screen and (max-width: 900px){
-/* Ajustando font sizes para pantallas pequeñas */
-:root{
-    --font-size-m: 1rem;
-    --font-size-l: 1.3rem;
-    --font-size-xl: 1.5rem;
-    --font-size-xxl: 1.8rem;
+.about-section {
+    padding: 120px 0;
+    background-image: url("imgs/b37c6b05-54fe-454f-b07b-f9deb16599bb.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    color: var(--white-color);
+    position: relative;
 }
 
-    body.show-mobile-menu header::before{
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+/* Media query code para un ancho máximo de 900px */
+@media screen and (max-width: 900px) {
+
+    /* Ajustando font sizes para pantallas pequeñas */
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu header::before {
         content: "";
         position: fixed;
         left: 0;
-        top:0;
-        height:100%;
-        width:100%;
+        top: 0;
+        height: 100%;
+        width: 100%;
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.2);
     }
-    .navbar .nav-menu{
+
+    .navbar .nav-menu {
         display: block;
         position: fixed;
         left: -300px;
@@ -206,28 +275,50 @@ gap: 10px;
         transition: left 0.2s ease;
     }
 
-    body.show-mobile-menu .navbar .nav-menu{
+    body.show-mobile-menu .navbar .nav-menu {
         left: 0;
     }
 
-    .navbar :where(#menu-close-button, #menu-open-button){
+    .navbar :where(#menu-close-btn, #menu-open-btn) {
         display: block;
         font-size: var(--font-size-l);
     }
 
-    .navbar #menu-close-button{
+    .navbar #menu-close-btn {
         position: absolute;
         right: 30px;
         top: 30px;
     }
-    .navbar #menu-open-button{
+
+    .navbar #menu-open-btn {
         color: var(--white-color);
     }
 
-    .navbar .nav-menu .nav-link{
-        color:var(--dark-color);
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
         display: block;
         margin-top: 17px;
         font-size: var(--font-size-l);
-}
+    }
+
+    .hero-section .section-content {
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        gap: 50px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .btns {
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
 }

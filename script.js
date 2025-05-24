@@ -1,6 +1,6 @@
 // Seleccionamos los botones por ID
-const openButton = document.querySelector("#menu-open-button");
-const closeButton = document.querySelector("#menu-close-button");
+const openButton = document.querySelector("#menu-open-btn");
+const closeButton = document.querySelector("#menu-close-btn");
 
 // Abrir menú móvil
 openButton.addEventListener("click", () => {
