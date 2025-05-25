@@ -5,8 +5,28 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    
+}
+body {
+    background-image: url("imgs/b37c6b05-54fe-454f-b07b-f9deb16599bb.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0; 
 }
 
+body::before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
 :root {
     --white-color: #fff;
     --dark-color: #252525;
@@ -46,6 +66,10 @@ a {
 img {
     width: 120%;
     height: auto;
+}
+
+h3{
+    color: var(--dark-color);
 }
 
 button {
@@ -126,7 +150,6 @@ header .navbar {
 
 /* HERO SECTION */
 .hero-section {
-    background: var(--primary-color);
     min-height: 100vh;
 }
 
@@ -140,7 +163,7 @@ header .navbar {
 
 .hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
-    color: var(--secondary-color);
+    color: var(--dark-color);
     font-family: "Miniver" sans-serif;
 }
 
@@ -190,15 +213,11 @@ header .navbar {
     margin-right: 50px;
 }
 
+/* About Section */
 .about-section {
     padding: 120px 0;
-    background-image: url("imgs/b37c6b05-54fe-454f-b07b-f9deb16599bb.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     padding: 60px 20px;
-    color: var(--white-color);
+    color: var(--dark-color);
     position: relative;
 }
 
@@ -216,16 +235,6 @@ header .navbar {
     border-radius: var(--border-radius-circle);
 }
 
-.about-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
 
 .section-content {
     position: relative;
@@ -233,11 +242,61 @@ header .navbar {
 }
 
 .about-section .about-details .text{
+    color: var(--white-color);
     line-height: 30px;
-    margin: 50px 0 30px;
+    margin: -15px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
 }
+
+.about-section .about-details{
+    width: 50%;
+}
+.about-section .social-link-list{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link{
+    color: var(--secondary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover{
+    color: var(--dark-color);
+}
+
+/* La sección del Menu */
+.menu-section{
+    color: var(--dark-color);
+    position: relative;
+    z-index: 1;
+    
+}
+
+.menu-section .menu-list{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 110px;
+}
+
+.menu-section .menu-list .menu-item{
+    color: var(--white-color);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-items: space-between;
+    width: calc(100% / 3 - 110px);
+}
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 75%;
+}
+
 /* Media query code para un ancho máximo de 900px */
 @media screen and (max-width: 900px) {
 
@@ -247,17 +306,6 @@ header .navbar {
         --font-size-l: 1.3rem;
         --font-size-xl: 1.5rem;
         --font-size-xxl: 1.8rem;
-    }
-
-    body.show-mobile-menu header::before {
-        content: "";
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        backdrop-filter: blur(5px);
-        background: rgba(0, 0, 0, 0.2);
     }
 
     .navbar .nav-menu {
@@ -309,7 +357,7 @@ header .navbar {
         text-align: center;
     }
 
-    .hero-section .hero-details :is(.subtitle, .description) {
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details {
         max-width: 100%;
     }
 
@@ -320,5 +368,17 @@ header .navbar {
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-right: 0;
+    }
+
+    .about-section .section-content{
+        gap:70px;
+        flex-direction: column-reverse;
+    }
+
+    .about-section .about-image-wrapper .about-image{
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
     }
 }
