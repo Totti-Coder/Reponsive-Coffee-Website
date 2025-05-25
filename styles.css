@@ -30,7 +30,7 @@ body::before {
 :root {
     --white-color: #fff;
     --dark-color: #252525;
-    --primary-color: #3b141c;
+    --primary-color: #7D3D23;
     --secondary-color: #f3961c;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
@@ -64,12 +64,13 @@ a {
 }
 
 img {
-    width: 120%;
+    width: 100%;
     height: auto;
+    display:block;
 }
 
 h3{
-    color: var(--dark-color);
+    color: var(--white-color)
 }
 
 button {
@@ -163,7 +164,7 @@ header .navbar {
 
 .hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
-    color: var(--dark-color);
+    color: var(--primary-color);
     font-family: "Miniver" sans-serif;
 }
 
@@ -276,26 +277,44 @@ header .navbar {
     
 }
 
-.menu-section .menu-list{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 110px;
+.menu-section .menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: var(--site-max-width);
 }
 
-.menu-section .menu-list .menu-item{
+.menu-section .menu-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Blanco con transparencia */
+    backdrop-filter: blur(5px); /* Suaviza el fondo detrás */
+    border-radius: var(--border-radius-s);
+    padding: 20px;
+    text-align: center;
     color: var(--white-color);
     display: flex;
-    text-align: center;
-    align-items: center;
     flex-direction: column;
-    justify-items: space-between;
-    width: calc(100% / 3 - 110px);
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.menu-section .menu-item:hover {
+    transform: scale(1.03);
 }
 
 .menu-section .menu-list .menu-item .menu-image{
-    max-width: 75%;
+
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px;
 }
+
 
 /* Media query code para un ancho máximo de 900px */
 @media screen and (max-width: 900px) {
