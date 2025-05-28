@@ -9,3 +9,17 @@ openButton.addEventListener("click", () => {
 
 // Cerrar menú móvil
 closeButton.addEventListener("click", () => openButton.click());
+
+const swiper = new Swiper('.slider-wrapper', {
+  slidesPerView: 1,     // Solo 1 slide visible
+  spaceBetween: 30,     // Espacio entre slides
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
