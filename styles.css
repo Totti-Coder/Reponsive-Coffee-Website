@@ -249,7 +249,7 @@ header .navbar {
 .about-section .about-details .text {
     color: var(--white-color);
     line-height: 30px;
-    margin: -30px 0 30px;
+    margin: -80px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
 }
@@ -294,7 +294,6 @@ header .navbar {
 
 .menu-section .menu-item {
     background-color: rgba(255, 255, 255, 0.1);
-    /* Blanco con transparencia */
     border-radius: var(--border-radius-s);
     padding: 20px;
     text-align: center;
@@ -312,6 +311,10 @@ header .navbar {
     transform: scale(1.03);
 }
 
+.menu-section .menu-item .name {
+    color: var(--dark-color)
+}
+
 .menu-section .menu-list .menu-item .menu-image {
 
     width: 100%;
@@ -327,7 +330,6 @@ header .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* centra todo el contenido dentro */
     padding: 60px 20px;
     width: 100%;
 }
@@ -340,7 +342,6 @@ header .navbar {
 
 .swiper {
     max-width: 400px;
-    /* ancho fijo del slider */
     margin: 0 auto;
 }
 
@@ -391,6 +392,23 @@ figcaption {
     font-weight: var(--font-weight-bold);
 }
 
+.image-fallback {
+    display: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 1rem;
+    line-height: 1.2;
+}
+
 .feedback {
     font-style: italic;
     font-size: var(--font-size-s);
@@ -400,11 +418,52 @@ figcaption {
 
 .swiper-pagination {
     position: relative !important;
-    /* evita que quede sobre el contenido */
     margin-top: 20px;
-    /* separa la paginación del contenido */
     z-index: 1;
-    /* para que no se superponga */
+}
+
+/* Sección de Contactanos */
+.contact-section {
+    padding: 50px 0px 100px;
+}
+
+.contact-section .section-content {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.contact-section .contact-info-list .contact-info i {
+    font-size: var(--font-size-m);
+}
+
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    outline: none;
+    margin-bottom: 16px;
+    background: var(--white-color);
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius-s);
+}
+
+.contact-section .contact-form .form-input:focus {
+    border-color: var(--secondary-color);
+}
+
+.contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
 }
 
 /* Media query code para un ancho máximo de 900px */

@@ -2,208 +2,277 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop | Pablo García Roza</title>
-    <!--Link de los iconos Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <!--Link de Swiper CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- De este link sacamos los iconos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop | Pablo García Roza</title>
+  <!--Link de los iconos Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!--Link de Swiper CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- De este link sacamos los iconos -->
 
 </head>
+
 <body>
-    <!-- La sección del Encabezado / Barra de navegación-->
-    <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h2 class="logo-text">☕ Coffee Shop</h2>
-            </a>
-            <ul class="nav-menu">
-                <li><button id="menu-close-btn" class="fas fa-times"></button></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Reseñas</a>
-                </li>
+  <!-- La sección del Encabezado / Barra de navegación-->
+  <header>
+    <nav class="navbar section-content">
+      <a href="#" class="nav-logo">
+        <h2 class="logo-text">☕ Coffee Shop</h2>
+      </a>
+      <ul class="nav-menu">
+        <li><button id="menu-close-btn" class="fas fa-times"></button></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Reseñas</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contacto</a>
+        </li>
+      </ul>
+      <button id="menu-open-btn" class="fas fa-bars"></button>
+    </nav>
+  </header>
+  <main>
+    <!-- La página principal de la web -->
+    <section class="hero-section">
+      <div class="section-content">
+        <div class="hero-details">
+          <h2 class="title">EL Mejor Café</h2>
+          <h3 class="subtitle">Haz que mejore tu día con un buen café!</h3>
+          <p class="description">Bienvenido al paraíso del café, donde cada grano cuenta una historia y cada
+            taza despierta una alegría.</p>
+          <div class="btns">
+            <a href="#" class="btn order-now">Pide ahora</a>
+            <a href="#" class="btn contact-us">Contactanos</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="imgs/Hero-section.png" alt="Hero" class="hero-image">
+        </div>
+      </div>
+    </section>
+    <!-- Sección Acerca -->
+    <section class="about-section">
+      <div class="section-content">
+        <div class="about-image-wrapper">
+          <img src="imgs/cafetero.jpg" alt="Nosotros" class="about-image">
+        </div>
+        <div class="about-details">
+          <h2 class="section-title">¿Quiénes somos?</h2>
+          <p class="text">En nuestra página web no solo vendemos café en cápsulas: ofrecemos pequeñas cápsulas de
+            experiencias. Cada variedad está inspirada en una historia, un lugar o un momento especial. Desde la bruma
+            de los Andes hasta los atardeceres toscanos, nuestras mezclas seleccionadas artesanalmente te invitan a
+            descubrir el mundo a través del aroma y el sabor. Compatibles con las máquinas más populares, pero creadas
+            para espíritus poco comunes.</p>
+          <div class="social-link-list">
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- La sección del Menu-->
+    <section class="menu-section">
+      <h2 class="section-title">Nuestro Menu</h2>
+      <div class="section-content">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_cappuccino.jpg" alt="Capuccino" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Capuccino</h3>
+            <p class="text">Un espresso coronado por la cremosidad de la leche y una capa de crema.</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_cafe_con_leche.jpg" alt="Café con Leche" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Café Con Leche</h3>
+            <p class="text">Una deliciosa combinación de leche con el mejor café espresso, en una sola cápsula.
+              ¡Perfecto para tu desayuno diario!</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_espresso_intenso.jpg" alt="Espresso Intenso" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Espresso Intenso</h3>
+            <p class="text">Un espresso coronado por la cremosidad de la leche y una capa de crema.</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_mocha.jpg" alt="Mocha" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Mocha</h3>
+            <p class="text">La combinación del intenso sabor del café con el exquisito chocolate. Es la excusa perfecta
+              para darse un capricho.</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_chococino_chocolate.jpg" alt="Chococino" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Chococino</h3>
+            <p class="text">Un riquísimo chocolate Nestlé nacido de la selección de las mejores semillas de cacao.</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_latte_macchiato.jpg" alt="Latte Macchiato" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Latte Macchiato</h3>
+            <p class="text">Leche cremosa, café 100% arábica y un toque de dulzura para que todos los días tengan ese
+              instante inolvidable.</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_chococino_chocolate.jpg" alt="Chococino" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Chococino</h3>
+            <p class="text">Un espresso perfecto de rico aroma combinado con un toque de leche en una sola cápsula.
+              Ideal en tu día a día y en cualquier momento. En una sola cápsula y ¡sin cafeína!</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_cortado_descafeinado.jpg" alt="Cortado Sin Cafeína"
+              class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Cortado Descafeinado</h3>
+            <p class="text">Un espresso perfecto de rico aroma combinado con un toque de leche en una sola cápsula.
+              Ideal en tu día a día y en cualquier momento. En una sola cápsula y ¡sin cafeína!</p>
+          </li>
+          <li class="menu-item">
+            <img src="imgs/capsula_nestle_dolce_gusto_espresso_barista.jpg" alt="Ristretto Barista" class="menu-image">
+            <h3 class="name">60 Cápsulas Dolce Ristretto Barista</h3>
+            <p class="text">Con el Ristretto Barista saborearás un café intenso, afrutado y con una fragancia
+              inconfundible. Un espresso perfecto con una crema aterciopelada para satisfacer los paladares más
+              exigentes. </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- La sección de Reseñas-->
+    <section class="testimonials-section">
+      <h2 class="section-title">Reseñas</h2>
+      <div class="section-content">
+        <div class="slider-container swiper">
+          <div class="slider-wrapper">
+            <ul class="testimonials-list swiper-wrapper">
+              <li class="testimonial swiper-slide">
+                <figure>
+                  <img src="imgs/Diego Torres.jpeg" alt="Foto de Diego Torres" class="user-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="image-fallback">Foto de Diego Torres</div>
+                  <figcaption>
+                    <h3 class="name">Diego Torres</h3>
+                    <blockquote class="feedback">
+                      “Probé la cápsula Intenso y me encantó su sabor fuerte y equilibrado. ¡Volveré a pedirlo!”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="testimonial swiper-slide">
+                <figure>
+                  <img src="imgs/Cristina-Fernandez.jpeg" alt="Foto de Cristina Fernandez" class="user-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="image-fallback">Foto de Cristina Fernandez</div>
+                  <figcaption>
+                    <h3 class="name">Cristina Fernandez</h3>
+                    <blockquote class="feedback">
+                      “Además del sabor espectacular de las cápsulas, la web es súper fácil de usar. Hice mi pedido en
+                      minutos y llegó rapidísimo.”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="testimonial swiper-slide">
+                <figure>
+                  <img src="imgs/Nacho Mendez.jpg" alt="Foto de Nacho Mendez" class="user-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="image-fallback">Foto de Nacho Mendez</div>
+                  <figcaption>
+                    <h3 class="name">Nacho Mendez</h3>
+                    <blockquote class="feedback">
+                      “Fácil de navegar, buenos precios y gran variedad de cápsulas. Volveré a comprar sin duda.”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="testimonial swiper-slide">
+                <figure>
+                  <img src="imgs/Sheila Casanova.jpg" alt="Foto de Sheila Casanova" class="user-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="image-fallback">Foto de Sheila Casanova</div>
+                  <figcaption>
+                    <h3 class="name">Sheila Casanova</h3>
+                    <blockquote class="feedback">
+                      “Excelente atención y envío muy rápido. Me encantó lo intuitiva que es la página. ¡Así da gusto
+                      comprar café!”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="testimonial swiper-slide">
+                <figure>
+                  <img src="imgs/Pablo_García.jpeg" alt="Foto de Pablo García" class="user-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="image-fallback">Foto de Pablo García</div>
+                  <figcaption>
+                    <h3 class="name">Pablo García</h3>
+                    <blockquote class="feedback">
+                      “La página es súper intuitiva y fácil de usar. Encontré mi café favorito en segundos y el envío
+                      fue rapidísimo. ¡Una excelente experiencia de compra!”
+                    </blockquote>
+                  </figcaption>
+                </figure>
+              </li>
             </ul>
-            <button id="menu-open-btn" class="fas fa-bars"></button>
-        </nav>
-    </header>
-    <main>
-        <!-- La página principal de la web -->
-        <section class="hero-section">
-            <div class="section-content">
-                <div class="hero-details">
-                    <h2 class="title">EL Mejor Café</h2>
-                    <h3 class="subtitle">Haz que mejore tu día con un buen café!</h3>
-                    <p class="description">Bienvenido al paraíso del café, donde cada grano cuenta una historia y cada
-                        taza despierta una alegría.</p>
-                    <div class="btns">
-                        <a href="#" class="btn order-now">Pide ahora</a>
-                        <a href="#" class="btn contact-us">Contactanos</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <img src="imgs/Hero-section.png" alt="Hero" class="hero-image">
-                </div>
-            </div>
-        </section>
-        <!-- Sección Acerca -->
-        <section class="about-section">
-            <div class="section-content">
-                <div class="about-image-wrapper">
-                    <img src="imgs/cafetero.jpg" alt="Nosotros" class="about-image">
-                </div>
-                <div class="about-details">
-                    <h2 class="section-title">¿Quiénes somos?</h2>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rem explicabo
-                        amet quibusdam officia. Molestiae porro odio, alias voluptas odit eaque incidunt quidem quaerat
-                        accusamus et corrupti, excepturi omnis laboriosam? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Cumque ipsum mollitia sapiente tempora tenetur corporis! Nihil necessitatibus
-                        cumque vero odit placeat quae culpa, dolores illum. Modi ducimus magni iusto quibusdam? Lorem
-                        ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ut, rerum, tempore blanditiis
-                        numquam cum necessitatibus provident nobis laudantium nulla natus. Deleniti autem eos, ipsum
-                        exercitationem expedita rem mollitia fuga.</p>
-                    <div class="social-link-list">
-                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section> 
-        <!-- La sección del Menu-->
-         <section class="menu-section">
-            <h2 class="section-title">Nuestro Menu</h2>
-            <div class="section-content">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_cappuccino.jpg" alt="Capuccino" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Capuccino</h3>
-                        <p class="text">Un espresso coronado por la cremosidad de la leche y una capa de crema.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_cafe_con_leche.jpg" alt="Café con Leche" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Café Con Leche</h3>
-                        <p class="text">Una deliciosa combinación de leche con el mejor café espresso, en una sola cápsula. ¡Perfecto para tu desayuno diario!</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_espresso_intenso.jpg" alt="Espresso Intenso" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Espresso Intenso</h3>
-                        <p class="text">Un espresso coronado por la cremosidad de la leche y una capa de crema.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_mocha.jpg" alt="Mocha" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Mocha</h3>
-                        <p class="text">La combinación del intenso sabor del café con el exquisito chocolate. Es la excusa perfecta para darse un capricho.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_chococino_chocolate.jpg" alt="Chococino" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Chococino</h3>
-                        <p class="text">Un riquísimo chocolate Nestlé nacido de la selección de las mejores semillas de cacao.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_latte_macchiato.jpg" alt="Latte Macchiato" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Latte Macchiato</h3>
-                        <p class="text">Leche cremosa, café 100% arábica y un toque de dulzura para que todos los días tengan ese instante inolvidable.</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_chococino_chocolate.jpg" alt="Chococino" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Chococino</h3>
-                        <p class="text">Un espresso perfecto de rico aroma combinado con un toque de leche en una sola cápsula. Ideal en tu día a día y en cualquier momento. En una sola cápsula y ¡sin cafeína!</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_cortado_descafeinado.jpg" alt="Cortado Sin Cafeína" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Cortado Descafeinado</h3>
-                        <p class="text">Un espresso perfecto de rico aroma combinado con un toque de leche en una sola cápsula. Ideal en tu día a día y en cualquier momento. En una sola cápsula y ¡sin cafeína!</p>
-                    </li>
-                    <li class="menu-item">
-                        <img src="imgs/capsula_nestle_dolce_gusto_espresso_barista.jpg" alt="Ristretto Barista" class="menu-image">
-                        <h3 class="name">60 Cápsulas Dolce Ristretto Barista</h3>
-                        <p class="text">Con el Ristretto Barista saborearás un café intenso, afrutado y con una fragancia inconfundible. Un espresso perfecto con una crema aterciopelada para satisfacer los paladares más exigentes. </p>
-                    </li>
-                </ul>
-            </div>
-         </section>
-         <!-- La sección de Reseñas-->
-         <section class="testimonials-section">
-  <h2 class="section-title">Reseñas</h2>
-  <div class="section-content">
-    <div class="slider-container swiper">
-      <div class="slider-wrapper">
-        <ul class="testimonials-list swiper-wrapper">
-          <li class="testimonial swiper-slide">
-            <figure>
-              <img src="imgs/User-1.jpeg" alt="Foto de Diego Torres" class="user-image">
-              <figcaption>
-                <h3 class="name">Diego Torres</h3>
-                <blockquote class="feedback">
-                  “Probé la cápsula Intenso y me encantó su sabor fuerte y equilibrado. ¡Volveré a pedirlo!”
-                </blockquote>
-              </figcaption>
-            </figure>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Sección de contacto-->
+    <section class="contact-section">
+      <h2 class="section-title">Contactanos</h2>
+      <div class="section-content">
+        <ul class="contact-info-list">
+          <li class="contact-info">
+            <i class="fas fa-crosshairs"></i>
+            <p>Calle Dos De Mayo, Número 39, Gijón, Asturias.</p>
           </li>
-          <li class="testimonial swiper-slide">
-            <figure>
-              <img src="imgs/User-1.jpeg" alt="Foto de Diego Torres" class="user-image">
-              <figcaption>
-                <h3 class="name">Diego Torres</h3>
-                <blockquote class="feedback">
-                  “Probé la cápsula Intenso y me encantó su sabor fuerte y equilibrado. ¡Volveré a pedirlo!”
-                </blockquote>
-              </figcaption>
-            </figure>
+          <li class="contact-info">
+            <i class="fa-regular fa-envelope"></i>
+            <p>pablogroza2000@gmail.com</p>
           </li>
-          <li class="testimonial swiper-slide">
-            <figure>
-              <img src="imgs/User-1.jpeg" alt="Foto de Diego Torres" class="user-image">
-              <figcaption>
-                <h3 class="name">Nacho Mendez</h3>
-                <blockquote class="feedback">
-                  “Probé la cápsula Intenso y me encantó su sabor fuerte y equilibrado. ¡Volveré a pedirlo!”
-                </blockquote>
-              </figcaption>
-            </figure>
+          <li class="contact-info">
+            <i class="fa-solid fa-phone"></i>
+            <p>(+33)644967269</p>
           </li>
-          <li class="testimonial swiper-slide">
-            <figure>
-              <img src="imgs/User-1.jpeg" alt="Foto de Diego Torres" class="user-image">
-              <figcaption>
-                <h3 class="name">Diego Torres</h3>
-                <blockquote class="feedback">
-                  “Probé la cápsula Intenso y me encantó su sabor fuerte y equilibrado. ¡Volveré a pedirlo!”
-                </blockquote>
-              </figcaption>
-            </figure>
+          <li class="contact-info">
+            <i class="fas fa-clock"></i>
+            <p>Lunes - Sábados: 8:30 - 16:30</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-clock"></i>
+            <p>Domingo: Cerrado</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-globe"></i>
+            <p>www.linkedin.com/in/pablo-garcía-roza-5272932aa</p>
           </li>
         </ul>
 
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <form action="#" class="contact-form">
+          <input type="text" placeholder="Tu nombre" class="form-input" required>
+          <input type="email" placeholder="tu correo"class="form-input" required>
+          <textarea placeholder="Deja tu mensaje" class="form-input" required rows="5"></textarea>
+          <button class="submit-button">Enviar</button>
+        </form>
+
+        
       </div>
-    </div>
-  </div>
-</section>
-    </main>
+    </section>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
