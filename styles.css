@@ -90,7 +90,7 @@ button {
 
 .section-title {
     text-align: center;
-    padding: 60px 0 120px;
+    padding: 60px 0 90px;
     white-space: nowrap;
     max-width: var(--site-max-width);
 }
@@ -168,7 +168,7 @@ header .navbar {
 
 .hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
-    color: var(--primary-color);
+    color: var(--dark-color);
     font-family: "Miniver" sans-serif;
 }
 
@@ -250,7 +250,7 @@ header .navbar {
 .about-section .about-details .text {
     color: var(--white-color);
     line-height: 30px;
-    margin: -80px 0 30px;
+    margin: -10px 0 30px;
     text-align: center;
     font-size: var(--font-size-m);
 }
@@ -339,6 +339,7 @@ header .navbar {
     font-size: var(--font-size-xxl);
     margin-bottom: 2rem;
     text-align: center;
+    color: var(--dark-color);
 }
 
 .swiper-button-next,
@@ -431,6 +432,11 @@ figcaption {
     padding: 50px 0px 100px;
 }
 
+.contact-section .section-title {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 40px auto; 
+}
 .contact-section .section-content {
     display: flex;
     gap: 48px;
@@ -495,16 +501,24 @@ figcaption {
     color: var(--white-color);
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-medium);
-    background: var(--primary-color);
+    background: var(--dark-color);
     border-radius: var(--border-radius-m);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--dark-color);
     transition: 0.3s ease;
     box-shadow: 0 0px 6px #000000;
+    display: block;
+    margin: 0 auto;
+
 }
 
 .contact-section .contact-form .submit-button:hover {
-    color: var(--primary-color);
+    color: var(--dark-color);
     background: transparent;
+}
+
+.contact-section .section-content{
+    align-items: center;
+    flex-direction: column-reverse;
 }
 
 /* Media query code para un ancho máximo de 900px */
