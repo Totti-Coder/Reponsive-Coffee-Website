@@ -24,19 +24,19 @@
       <ul class="nav-menu">
         <li><button id="menu-close-btn" class="fas fa-times"></button></li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Inicio</a>
+          <a href="#hero" class="nav-link">Inicio</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Nosotros</a>
+          <a href="#about" class="nav-link">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Menu</a>
+          <a href="#menu" class="nav-link">Menu</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Reseñas</a>
+          <a href="#testimonials" class="nav-link">Reseñas</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Contacto</a>
+          <a href="#contact" class="nav-link">Contacto</a>
         </li>
       </ul>
       <button id="menu-open-btn" class="fas fa-bars"></button>
@@ -44,7 +44,7 @@
   </header>
   <main>
     <!-- La página principal de la web -->
-    <section class="hero-section">
+    <section id="hero" class="hero-section">
       <div class="section-content">
         <div class="hero-details">
           <h2 class="title">EL Mejor Café</h2>
@@ -62,7 +62,7 @@
       </div>
     </section>
     <!-- Sección Acerca -->
-    <section class="about-section">
+    <section id="about" class="about-section">
       <div class="section-content">
         <div class="about-image-wrapper">
           <img src="imgs/cafetero.jpg" alt="Nosotros" class="about-image">
@@ -83,7 +83,7 @@
       </div>
     </section>
     <!-- La sección del Menu-->
-    <section class="menu-section">
+    <section id="menu" class="menu-section">
       <h2 class="section-title">Nuestro Menu</h2>
       <div class="section-content">
         <ul class="menu-list">
@@ -144,7 +144,7 @@
       </div>
     </section>
     <!-- La sección de Reseñas-->
-    <section class="testimonials-section">
+    <section id="testimonials" class="testimonials-section">
       <h2 class="section-title">Reseñas</h2>
       <div class="section-content">
         <div class="slider-container swiper">
@@ -228,7 +228,7 @@
       </div>
     </section>
     <!--Sección de contacto-->
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <h2 class="section-title">Contactanos</h2>
       <div class="section-content">
         <ul class="contact-info-list">
@@ -242,7 +242,7 @@
           </li>
           <li class="contact-info">
             <i class="fa-solid fa-phone"></i>
-            <p><span class="info-number">(+33)644967269</span></p>
+            <p><span class="info-number">(+33) 644967269</span></p>
           </li>
           <li class="contact-info">
             <i class="fas fa-clock"></i>
@@ -254,20 +254,43 @@
           </li>
           <li class="contact-info">
             <i class="fas fa-globe"></i>
-            <p><span class="info-link">www.linkedin.com/in/pablo-garcía-roza-5272932aa</span></p>
+            <em><a 
+              href="https://www.linkedin.com/in/pablo-garcía-roza-5272932aa" 
+              target="_blank" 
+              class="linkedin-button"
+              rel="noopener noreferrer"
+              aria-label="Mi perfil de Linkedin, se abre en una nueva pestaña">Mi perfil de Linkedin
           </li>
         </ul>
 
         <form action="#" class="contact-form">
           <input type="text" placeholder="Tu nombre" class="form-input" required>
-          <input type="email" placeholder="Tu correo"class="form-input" required>
+          <input type="email" placeholder="Tu correo" class="form-input" required>
           <textarea placeholder="Deja tu mensaje" class="form-input" required rows="5"></textarea>
           <button class="submit-button">Enviar</button>
         </form>
 
-        
+
       </div>
     </section>
+    <!-- Sección del footer-->
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">© 2025 Pablo Coffee Shop</p>
+      </div>
+
+      <div class="social-link-list">
+        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+
+      <p class="policy-text">
+        <a href="#" class="policy-link">Privacy policy</a>
+        <span class="separator"></span>
+        <a href="#" class="policy-link">Refund policy</a>
+      </p>
+    </footer>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
