@@ -328,6 +328,7 @@ header .navbar {
 
 /* Sección de Reseñas */
 .testimonials-section {
+    user-select: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -480,6 +481,7 @@ figcaption {
     border: 1px solid var(--medium-gray-color);
     border-radius: var(--border-radius-s);
     box-shadow: 0 0px 6px #000000;
+
 }
 
 .contact-section .contact-form {
@@ -522,9 +524,9 @@ figcaption {
     flex-direction: column-reverse;
 }
 
-a.linkedin-button{
-  text-decoration: none;
-  color: inherit;
+a.linkedin-button {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Sección del footer */
@@ -541,19 +543,80 @@ a.linkedin-button{
 
 .footer-section :where(.copyright-text, .social-link, .policy-link, .refund-link) {
     color: var(--white-color);
+    transition: 0.3s ease;
 }
 
 .footer-section .social-link-list {
     display: flex;
-    gap: 25px;
+    gap: 45px;
 }
 
 .footer-section .social-link-list .social-link {
     font-size: var(--font-size-l);
 }
 
-.footer-section .social-link-list .social-link:hover {
+.footer-section .policy-text .separator{
+    margin: 0 5px;
+    color: var(--white-color);
+}
+
+.footer-section .social-link-list .social-link:hover, .footer-section .policy-text .policy-link:hover {
     color: var(--secondary-color);
+}
+
+/* Políticas privacidad diseñadas por ChatGPT */
+.privacy-policy-section {
+    padding: 70px 30px;
+    background-color: #f4e8d4; 
+    color: var(--primary-color); 
+    position: relative;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.privacy-policy-section .section-content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fffaf3;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--dark-color);
+    padding: 40px;
+}
+
+.privacy-policy-section h2.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--primary-color); 
+    font-size: 2.2rem;
+}
+
+.privacy-policy-section h3 {
+    margin-top: 28px;
+    color: var(--primary-color); 
+    font-size: 1.4rem;
+}
+
+.privacy-policy-section p,
+.privacy-policy-section ul {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: var(--primary-color);
+}
+
+.privacy-policy-section ul {
+    padding-left: 24px;
+    list-style: disc;
+}
+
+.privacy-policy-section a {
+    color: #6d4c41;
+    text-decoration: underline;
+}
+
+.privacy-policy-section .privacy-text .update-date{
+    color:var(--dark-color);
+    font-weight: var(--font-weight-bold);
 }
 
 /* Media query code para un ancho máximo de 900px */
@@ -580,10 +643,10 @@ a.linkedin-button{
         padding: 100px;
         background: var(--white-color);
         transition: left 0.2s ease;
-        background-image:url(https://i.pinimg.com/736x/32/f2/24/32f224272b381fa928c536e8cd1e74f0.jpg);
-        background-size: cover;         
-        background-position: center;    
-        background-repeat: no-repeat;   
+        background-image: url(https://i.pinimg.com/736x/32/f2/24/32f224272b381fa928c536e8cd1e74f0.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
 
@@ -658,4 +721,9 @@ a.linkedin-button{
         max-width: 250px;
         aspect-ratio: 1;
     }
+    .footer-section .section-content{
+        flex-direction: column;
+        gap: 18px;
+    }
+
 }
